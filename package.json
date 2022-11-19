@@ -1,0 +1,23 @@
+{
+  "name": "react-remote-props",
+  "version": "1.0.0",
+  "description": "Control React Components' props remotely",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatanelGordon/react-remote-props.git"
+  },
+  "keywords": [],
+  "author": "Matanel Gordon",
+  "contributors": [
+    "Noa Ovadia"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatanelGordon/react-remote-props/issues"
+  },
+  "homepage": "https://github.com/MatanelGordon/react-remote-props#readme"
+}
