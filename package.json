@@ -1,23 +1,52 @@
 {
-  "name": "react-remote-props",
-  "version": "1.0.0",
-  "description": "Control React Components' props remotely",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MatanelGordon/react-remote-props.git"
-  },
-  "keywords": [],
-  "author": "Matanel Gordon",
-  "contributors": [
-    "Noa Ovadia"
-  ],
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/MatanelGordon/react-remote-props/issues"
-  },
-  "homepage": "https://github.com/MatanelGordon/react-remote-props#readme"
+	"name": "react-remote-props",
+	"version": "1.0.0",
+	"description": "Control React Components' props remotely",
+	"main": "index.js",
+	"scripts": {
+		"test:ui": "vitest --ui",
+		"test": "vitest run",
+		"test:dev": "vitest",
+		"lint": "eslint **/*.tsx",
+		"build": "vite build",
+		"dev": "vite"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MatanelGordon/react-remote-props.git"
+	},
+	"keywords": [],
+	"author": "Matanel Gordon",
+	"contributors": [
+		"Noa Ovadia"
+	],
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/MatanelGordon/react-remote-props/issues"
+	},
+	"homepage": "https://github.com/MatanelGordon/react-remote-props#readme",
+	"devDependencies": {
+		"@testing-library/react": "^13.4.0",
+		"@types/react": "^18.0.25",
+		"@typescript-eslint/eslint-plugin": "^5.43.0",
+		"@typescript-eslint/parser": "^5.43.0",
+		"@vitejs/plugin-react": "^2.2.0",
+		"@vitest/ui": "^0.25.2",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-import-resolver-typescript": "^3.5.2",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"prettier": "^2.7.1",
+		"react": "^18.2.0",
+		"typescript": "4.8.3",
+		"vite": "^3.2.4",
+		"vitest": "^0.25.2"
+	},
+	"dependencies": {
+		"rxjs": "^7.5.7"
+	},
+	"peerDependencies": {
+		"react": "^16 || ^17 || ^18"
+	}
 }
