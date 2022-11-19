@@ -1,5 +1,6 @@
 import {ComponentType, FC, useEffect, useState} from 'react';
 import { BehaviorSubject } from 'rxjs';
+import {render} from "@testing-library/react";
 
 export type PropsSetterParam<T> = Partial<T> | ((prev:T) => Partial<T>); 
 export type PropsSetter<T> = (value:PropsSetterParam<T>) => void;
@@ -21,7 +22,7 @@ export type PropsSetter<T> = (value:PropsSetterParam<T>) => void;
  * })
  * ```
  */
-export function withProps<T>(Component: ComponentType<T>, initialProps: Partial<T>): [FC<T>, PropsSetter<T>] {
+export function withProps<T>(Component: ComponentType<T>, initialProps: Partial<T>): [FC, PropsSetter<T>] {
 	const subject = new BehaviorSubject<T>({
 		...Component.defaultProps,
 		...initialProps
@@ -60,4 +61,26 @@ export function withProps<T>(Component: ComponentType<T>, initialProps: Partial<
 	};
 
 	return [Wrapper, setProps];
+}
+
+/**
+ * renders a component with props and allows change of props.
+ * @param Component {ComponentType} a react component
+ * @param initialProps {object} the props needed to run the component
+ * @returns a setter function to change the props.
+ * @example ```
+ * const setProps = renderWithProps(Button, {
+ *     content: "Hello World"
+ * });
+ *
+ * //to set props:
+ * setProps({
+ *     content: "Another Content"
+ * })
+ * ```
+ */
+export function renderWithProps<T>(Component:ComponentType<T>, initialProps: Partial<T>): PropsSetter<T>{
+	const [Wrapper, setProps] = withProps(Component, initialProps);
+	render(<Wrapper />);
+	return setProps;
 }
