@@ -4,10 +4,11 @@
 	"description": "Control React Components' props remotely",
 	"main": "index.js",
 	"scripts": {
-		"test:ui": "vitest --ui",
 		"test": "vitest run",
+		"test:ui": "vitest --ui",
 		"test:dev": "vitest",
 		"lint": "eslint **/*.tsx",
+		"lint:fix": "eslint **/*.tsx --fix",
 		"build": "tsc -p tsconfig.json"
 	},
 	"repository": {
