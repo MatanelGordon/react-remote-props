@@ -13,6 +13,8 @@
 		"moduleResolution": "Node",
 		"resolveJsonModule": true
 	},
-	"include": ["index.tsx"],
+	"include": [
+		"src/index.tsx"
+	],
 	"exclude": ["node_modules"]
 }
