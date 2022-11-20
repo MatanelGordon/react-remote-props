@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest';
 import { FC } from 'react';
-import { renderWithProps, withProps } from './index';
+import { renderWithProps, remoteProps } from './index';
 import { render, screen } from '@testing-library/react';
 
 interface TestProps {
@@ -11,7 +11,7 @@ const TestComponent: FC<TestProps> = ({ content }) => <button>{content}</button>
 
 it('should work when calling withProps()', () => {
 	const content = 'noa';
-	const [Wrapper, setProps] = withProps(TestComponent, {
+	const [Wrapper, setProps] = remoteProps(TestComponent, {
 		content: 'matanel',
 	});
 
