@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest';
 import { FC } from 'react';
-import { renderWithProps, remoteProps } from './index';
+import { remoteProps } from './index';
 import { render, screen } from '@testing-library/react';
 
 interface TestProps {
@@ -24,28 +24,11 @@ it('should work when calling withProps()', () => {
 	}, 10);
 });
 
-it('should work when calling renderWithProps()', () => {
-	const content = {
-		before: 'test',
-		after: 'test2',
-	};
-	const setProps = renderWithProps(TestComponent, {
-		content: content.before,
-	});
-
-	setTimeout(() => {
-		setProps({
-			content: content.after,
-		});
-
-		expect(screen.getByText(content.before)).not.toBeDefined();
-		expect(screen.getByText(content.after)).toBeDefined();
-	}, 10);
-});
-
-it('should mount component when calling renderWithProps()', () => {
+it('should mount wrapper successfully', () => {
 	const content = 'test';
-	renderWithProps(TestComponent, { content });
+	const [Wrapper] = remoteProps(TestComponent, { content });
+
+	render(<Wrapper />);
 
 	expect(screen.getByText(content)).toBeDefined();
 });
