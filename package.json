@@ -1,9 +1,11 @@
 {
 	"name": "react-remote-props",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "Control React Components' props remotely",
 	"main": "index.js",
-	"files": ["dist/"],
+	"files": [
+		"dist/"
+	],
 	"scripts": {
 		"test": "vitest run",
 		"test:ui": "vitest --ui",
