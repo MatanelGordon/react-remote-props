@@ -1,6 +1,6 @@
 {
 	"name": "react-remote-props",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Control React Components' props remotely",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
