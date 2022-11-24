@@ -27,20 +27,11 @@ export function remoteProps<T>(Component: ComponentType<T>, initialProps: Partia
 		...initialProps,
 	} as T);
 
-	const setProps: PropsSetter<T> = (valueorFunc) => {
-		let nextProps;
-
-		if (typeof valueorFunc === 'function') {
-			nextProps = {
-				...subject.value,
-				...valueorFunc(subject.value),
-			};
-		} else {
-			nextProps = {
-				...subject.value,
-				...valueorFunc,
-			};
-		}
+	const setProps: PropsSetter<T> = (valueOrFunc) => {
+		const nextProps = {
+			...subject.value,
+			...(typeof valueOrFunc === 'function' ? valueOrFunc(subject.value) : valueOrFunc),
+		};
 
 		subject.next(nextProps);
 	};

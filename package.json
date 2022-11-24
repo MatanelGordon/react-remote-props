@@ -1,15 +1,17 @@
 {
 	"name": "react-remote-props",
-	"version": "1.0.0",
+	"version": "0.0.0",
 	"description": "Control React Components' props remotely",
 	"main": "index.js",
+	"files": ["dist/"],
 	"scripts": {
 		"test": "vitest run",
 		"test:ui": "vitest --ui",
 		"test:dev": "vitest",
 		"lint": "eslint **/*.tsx",
 		"lint:fix": "eslint **/*.tsx --fix",
-		"build": "tsc -p tsconfig.json"
+		"build": "tsc -p tsconfig.json",
+		"prepublish": "npm run build"
 	},
 	"repository": {
 		"type": "git",
