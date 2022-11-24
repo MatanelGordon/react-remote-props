@@ -19,7 +19,15 @@
 		"type": "git",
 		"url": "git+https://github.com/MatanelGordon/react-remote-props.git"
 	},
-	"keywords": [],
+	"keywords": [
+		"remote-props",
+		"react",
+		"react-remote",
+		"react-library",
+		"setProps",
+		"react-rxjs",
+		"rxjs"
+	],
 	"author": "Matanel Gordon",
 	"contributors": [
 		"Noa Ovadia"
