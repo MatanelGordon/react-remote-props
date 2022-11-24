@@ -1,7 +1,8 @@
 # react-remote-props
 Control React Components' props remotely
 
-> NOTE: This is not recommended for production usage.
+![npm](https://img.shields.io/npm/v/react-remote-props)
+![NPM](https://img.shields.io/npm/l/react-remote-props)
 
 # Getting Started
 
