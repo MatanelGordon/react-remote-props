@@ -20,13 +20,11 @@ To use react-remote-props, Here's an example:
 ```jsx
 const [RemoteButton, setProps] = remoteProps(Button, {
     size: "lg",
- content: "Click Me"
+    content: "Click Me"
 });
 
 export const App = () => {
-    return <>
-  <RemoteButton />
- </>
+    return <RemoteButton />
 }
 ```
 
@@ -39,13 +37,11 @@ to create a remote component inside a react component, We recommend to use `useM
 
 export const App = () => {
  const [RemoteButton, setProps] = useMemo(remoteProps(Button, {
-  size: "lg",
-  content: "Click Me"
+    size: "lg",
+    content: "Click Me"
  }), []);
     
-    return <>
-  <RemoteButton />
- </>
+    return <RemoteButton />
 }
 ```
 
